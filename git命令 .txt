@@ -1,0 +1,57 @@
+cd 移动当前目录
+cd .. 返回上一级
+git clone https:// 克隆项目
+
+妙味课堂
+第二课
+git config --global user.name "" 设置用户名
+git config --global user.email "" 设置邮箱
+git config --global user.email 查看
+git config --list 查看配置文件
+第三课
+master 主分支默认名字
+什么是分支：
+git分为3个区：工作区 暂存区（作为过渡层、避免误操作、保护工作区和版本区、分支处理） 版本区
+
+.表示提交全部
+git status 查看文件状态(缓存区和暂存区）
+git add .\xx.html（添加到缓存区）
+git commit xx.html（添加到版本区）
+第一种
+ -m "content"
+提交缓存区中所有的文件
+第二种
+1.输入要提交的说明'comment'。
+2.按Esc,最后输入:，光标跑到了最下面。
+3.输入wq之后，摁回车，就会回到原始的命令行界面。
+提交单个文件
+git log 查看从暂存区提交到版本区的历史
+1.q 返回到命令行页面。
+
+第四课
+git diff 工作区和缓存区的对比
+git diff --cached 缓存区和版本区的对比
+git diff (master版本区的名字）工作区和版本区的对比
+第五课
+git reset HEAD x.html 把工作区的文件撤销为（缓存区）的文件
+git checkout x.html 把工作区的文件替换成（如果缓存区没有当前文件，就替换成版本区的）
+git commit -m "content" --amend 把版本区的撤销到缓存区，然后合并提交缓存区。
+第六课
+git rm -f x.txt 删除缓存区和工作区的文件
+git rm --cached x.txt 删除缓存区的文件
+第七课
+git checkout commit_id <file.name> 还原单个文件
+git reset --hard commit_id 还原版本（多个文件）
+第八课
+git remote 查看远程仓库名字
+git remote -v 查看远程仓库对应地址
+git push （仓库名字）（分支名字）同步到远程仓库
+第九课
+没看懂 解决冲突
+
+删除
+$ git pull origin master 将远程仓库里面的项目拉下来
+$ dir  查看有哪些文件夹
+$ git rm -r --cached target  删除target文件或文件夹
+$ git commit -m '我是操作说明'  提交,添加操作说明
+git push （仓库名字）（分支名字）同步到远程仓库
